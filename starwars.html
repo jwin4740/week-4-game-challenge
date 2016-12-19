@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="https://code.jquery.com/jquery-2.2.3.js" integrity="sha256-laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4=" crossorigin="anonymous"></script>
+    <script src="assets/javascript/starwarsgame.js"></script>
+    
+    <!-- Added a link to Bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href=assets/css/reset.css> -->
+    <link rel="stylesheet" href="assets/css/stylestarwars.css">
+    <title> STAR WARS </title>
+    <link href="https://fonts.googleapis.com/css?family=Bowlby+One+SC" rel="stylesheet">
+</head>
+
+<body>
+<h2 style="text-align: center; color: yellow; font-family: 'Bowlby One SC', cursive; font-size: 50px; opacity: 0.8;">STAR WARS RPG</h2>
+<button id="arenabuttonin">fade in</button>
+<button id="arenabuttonout">fade out</button>
+
+     <audio loop  id="theme2">
+        <source src="assets/av/saberduelcut.mp3" type="audio/mp3">
+    </audio>
+    <audio loop  id="theme">
+        <source src="assets/av/imperialmarch.mp3" type="audio/mp3">
+    </audio>
+    <audio id="saberdraw" src="assets/av/saberdraw.mp3">
+    </audio>
+    <audio loop id="saberbuzz" src="assets/av/saberbuzz.mp3">
+    </audio>
+    <audio loop id="sabersbuzz" src="assets/av/saberbuzz.mp3">
+    </audio>
+    <audio id="sabercontact" src="assets/av/sabercontact.mp3">
+    </audio>
+    <audio id="sabersheath" src="assets/av/sabersheath.mp3">
+    </audio>
+  <!--   <video controls="" id="entrancemaul" src="assets/av/maulentrance.mp4"></video> -->
+         <div id="chosen">
+            <img class="player" id="darth" src="assets/images/darthmaul.jpeg">
+        </div>
+        <div id="chosen">
+            <img class="player" id="qui" src="assets/images/quigon.jpeg">
+        </div>
+        <div id="chosen">
+            <img class="player" id="obi" src="assets/images/obiwan.jpg">
+        </div>
+        <div id="chosen">
+            <img class="player" id="count" src="assets/images/countdooku.jpg">
+        </div>
+        <div id="selected"><img class="player" id="qui" src="assets/images/quigon.jpeg"></div>
+        
+    
+    <div id="arena">
+   <!--  <div id="selectPlayer">
+        <img class="player" src="assets/images/obiwan.jpg">
+        <img class="player" src="">
+        <img class="player" src="">
+        <img class="player" src="">
+    </div> -->
+
+        <div id ="obiwan">
+            <div class="lightsaber"></div>
+            <img class="obi" id="blue"  src="assets/images/obiwan.png">
+
+        </div>
+    </div>
+   
+    <button id="go">saber</button>
+
+      
+
+</body>
+
+</html>
