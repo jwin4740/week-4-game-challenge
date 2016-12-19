@@ -17,6 +17,12 @@ p{
     margin-bottom: 0px;
 }
 
+#entrancemaul{
+    position: relative;
+    height: 300px;
+    width: 500px;
+}
+
 #arena{
     display: none;
     overflow: hidden;
