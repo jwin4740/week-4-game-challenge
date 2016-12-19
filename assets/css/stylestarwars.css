@@ -9,18 +9,14 @@ body {
     z-index: -1;
     font-weight: 900;
     font-size: 16px;
-    color: black;
+    color: white;
     width: 100%;
 }
 
-.container {
-    margin-left: 10px;
+p{
+    margin-bottom: 0px;
 }
 
-#entrancemaul{
-    height: 300px;
-    width: 500px;
-}
 #arena{
     display: none;
     overflow: hidden;
@@ -32,43 +28,6 @@ body {
     left: 175px; 
     width: 1000px; 
     height: 600px;
-}
-
-#obiwan{
-    position: relative;
-        height: 200px;
-        width: 200px;
-        border: solid 3px white;
-        left: 550px;
-        top: 250px;
-
-}
-    img.obi{
-        position: absolute;
-        height: 200px;
-        width: 200px;
-        bottom: 10px;
-        right: 15px;
-    }
-
-.row {
-    border: solid 1px black;
-    margin-bottom: 5px;
-}
-
-.col-md-1 {
-    margin-right: 5px;
-}
-
-#genNumber {
-    float: left;
-    height: 100px;
-    width: 205px;
-    border: solid 4px black;
-}
-
-#four {
-    clear: both;
 }
 
 #chosen{
@@ -83,10 +42,7 @@ body {
     width: 300px;
     top: 200px;
     left: 500px;
-
-
 }
-
 
 .enemy{
     float: left;
@@ -104,22 +60,44 @@ body {
    
 
 }
+
+pre{
+    background: none;
+    color: yellow;
+    padding: 0px;
+    font-size: 12px;
+    margin-bottom: 0px;
+    height: 15px;
+    overflow: hidden;
+    border: none;
+}
+#instructions{
+    height: 150px;
+}
+
+#playerbox{
+    margin-left: 130px;
+    float: left;
+}
 .player{
     height: 200px;
     width: 200px;
     background-image: cover;
     cursor: pointer;
     opacity: 0.8;
-    
-    
+    padding: 5px;
 }
-img.gem {
-    float: left;
-    width: 100px;
-    height: 100px;
+
+.playerdiv{
+    overflow: hidden;
+    padding: 5px;
+    border: solid 2px white;
     cursor: pointer;
-    margin-right: 5px;
-}
+    margin-left: 5px;
+    display: inline-block;
+    text-align: center;
+    }
+
 
 .lightsaber{
     position: absolute;
@@ -148,63 +126,9 @@ img.gem {
    width: 200px;
    background-color: red;
 }
-#five {
-    clear: both;
+
+
+
+#go{
+    clear:both;
 }
-
-.totscore {
-    float: left;
-    height: 100px;
-    width: 205px;
-    border: solid 4px black;
-    margin-right: 5px;
-}
-
-.scorebox {
-    float: left;
-    height: 100px;
-    width: 150px;
-    border: solid 4px black;
-}
-
-.sparkle{
-    width: 100px;
-    height: 100px;
-}
-
-#sparkle1{
-    position: absolute;
-    z-index: 2;
-    top: 320px;
-    left: 250px;
-    opacity: 0.9;
-}
-
-#sparkle2{
-    position: absolute;
-    z-index: 2;
-    top: 335px;
-    left: 220px;
-    opacity: 0.9;
-}
-
-#sparkle3{
-    position: absolute;
-    z-index: 2;
-    top: 350px;
-    left: 250px;
-    opacity: 0.9;
-}
-
-#sparkle4{
-    position: absolute;
-    z-index: 2;
-    top: 315px;
-    left: 215px;
-    opacity: 0.9;
-}
-
-
-
-
-

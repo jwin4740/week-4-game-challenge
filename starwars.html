@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <script src="https://code.jquery.com/jquery-2.2.3.js" integrity="sha256-laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4=" crossorigin="anonymous"></script>
     <script src="assets/javascript/starwarsgame.js"></script>
-    
     <!-- Added a link to Bootstrap-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <!-- <link rel="stylesheet" href=assets/css/reset.css> -->
@@ -15,14 +14,13 @@
 </head>
 
 <body>
-<h2 style="text-align: center; color: yellow; font-family: 'Bowlby One SC', cursive; font-size: 50px; opacity: 0.8;">STAR WARS RPG</h2>
-<button id="arenabuttonin">fade in</button>
-<button id="arenabuttonout">fade out</button>
-
-     <audio loop  id="theme2">
+    <h2 style="text-align: center; color: yellow; font-family: 'Bowlby One SC', cursive; font-size: 50px; opacity: 0.8;">STAR WARS RPG</h2>
+    <!-- <button id="arenabuttonin">fade in</button>
+<button id="arenabuttonout">fade out</button> -->
+    <audio loop id="theme2">
         <source src="assets/av/saberduelcut.mp3" type="audio/mp3">
     </audio>
-    <audio loop  id="theme">
+    <audio loop id="theme">
         <source src="assets/av/imperialmarch.mp3" type="audio/mp3">
     </audio>
     <audio id="saberdraw" src="assets/av/saberdraw.mp3">
@@ -35,41 +33,61 @@
     </audio>
     <audio id="sabersheath" src="assets/av/sabersheath.mp3">
     </audio>
-  <!--   <video controls="" id="entrancemaul" src="assets/av/maulentrance.mp4"></video> -->
-         <div id="chosen">
-            <img class="player" id="darth" src="assets/images/darthmaul.jpeg">
-        </div>
-        <div id="chosen">
-            <img class="player" id="qui" src="assets/images/quigon.jpeg">
-        </div>
-        <div id="chosen">
+    <!--   <video controls="" id="entrancemaul" src="assets/av/maulentrance.mp4"></video> -->
+    <div id="instructions">
+
+    </div>
+    <div id="playerbox">
+        <div class="playerdiv" id="obi">
+            <p>175 HP</p>
             <img class="player" id="obi" src="assets/images/obiwan.jpg">
+            <p> Obi-wan Kenobi
+            </p>
+            <pre>
+HP: 175  ATTACK: 12  COUNTERATTACK: 15
+                </pre>
         </div>
-        <div id="chosen">
-            <img class="player" id="count" src="assets/images/countdooku.jpg">
+        <div class="playerdiv" id="qui">
+            <p>175 HP</p>
+            <img class="player" src="assets/images/quigon.jpeg">
+            <p> Qui-gon Ginn
+            </p>
+            <pre>
+HP: 175  ATTACK: 12  COUNTERATTACK: 15
+                </pre>
         </div>
-        <div id="selected"><img class="player" id="qui" src="assets/images/quigon.jpeg"></div>
-        
-    
+        <div class="playerdiv" id="count">
+            <p>175 HP</p>
+            <img class="player" src="assets/images/countdooku.jpg">
+            <p> Count Dooku
+            </p>
+            <pre>
+HP: 175  ATTACK: 12  COUNTERATTACK: 15
+                </pre>
+        </div>
+        <div class="playerdiv" id="darth">
+            <p>175 HP</p>
+            <img class="player" src="assets/images/darthmaul.jpeg">
+            <p> Darth Maul
+            </p>
+            <pre>
+HP: 175  ATTACK: 12  COUNTERATTACK: 15
+                </pre>
+        </div>
+    </div>
     <div id="arena">
-   <!--  <div id="selectPlayer">
+        <!--  <div id="selectPlayer">
         <img class="player" src="assets/images/obiwan.jpg">
         <img class="player" src="">
         <img class="player" src="">
         <img class="player" src="">
     </div> -->
-
-        <div id ="obiwan">
+        <div id="obiwan">
             <div class="lightsaber"></div>
-            <img class="obi" id="blue"  src="assets/images/obiwan.png">
-
+            <img class="obi" id="blue" src="assets/images/obiwan.png">
         </div>
     </div>
-   
-    <button id="go">saber</button>
-
-      
-
+    
 </body>
 
 </html>
