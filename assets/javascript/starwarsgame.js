@@ -183,71 +183,85 @@ selectCharacter();
         $("#arena").fadeOut(1000);
     });
 
+function showPlayerObi() {
+       $("#halfleft").append('<img class="playerselect" src="assets/images/obiwan.jpg">');
+       $("#halfleft").css({display: "block"});
+       $("#halfright").append('<img class="playerenemy" src="assets/images/darthmaul.jpeg">');
+       $("#halfright").css({display: "block"});
+       $("#halfright").append('<img class="playerenemy" src="assets/images/quigon.jpeg">');
+       $("#halfright").css({display: "block"});
+       $("#halfright").append('<img class="playerenemy" src="assets/images/countdooku.jpg">');
+       $("#halfright").css({display: "block"});
+      }
 
-    // $("#go").click(function() {
-    //     $(".lightsaber").animate({
-    //         height: "180px",
+function showPlayerQui() {
+       $("#halfleft").append('<img class="playerselect" src="assets/images/quigon.jpeg">');
+       $("#halfleft").css({display: "block"});
+       $("#halfright").append('<img class="playerenemy" src="assets/images/darthmaul.jpeg">');
+       $("#halfright").css({display: "block"});
+       $("#halfright").append('<img class="playerenemy" src="assets/images/obiwan.jpg">');
+       $("#halfright").css({display: "block"});
+       $("#halfright").append('<img class="playerenemy" src="assets/images/countdooku.jpg">');
+       $("#halfright").css({display: "block"});
+      }
 
-    //     }, 1500);
-    //     $(".lightsaber").css({
-    //         border: "solid 4px green",
+function showPlayerCount() {
+       $("#halfleft").append('<img class="playerselect" src="assets/images/countdooku.jpg">');
+       $("#halfleft").css({display: "block"});
+       $("#halfright").append('<img class="playerenemy" src="assets/images/darthmaul.jpeg">');
+       $("#halfright").css({display: "block"});
+       $("#halfright").append('<img class="playerenemy" src="assets/images/obiwan.jpg">');
+       $("#halfright").css({display: "block"});
+       $("#halfright").append('<img class="playerenemy" src="assets/images/quigon.jpeg">');
+       $("#halfright").css({display: "block"});
+      }
 
-    //     }, 1500);
-    // });
-function showPlayer() {
-       $("#selectedplayer").html("You have chosen QuigonGinn" + '<img class="playerselect" src="assets/images/quigon.jpeg">');
-
+function showPlayerDarth() {
+       $("#halfleft").append('<img class="playerselect" src="assets/images/darthmaul.jpeg">');
+       $("#halfleft").css({display: "block"});
+       $("#halfright").append('<img class="playerenemy" src="assets/images/quigon.jpeg">');
+       $("#halfright").css({display: "block"});
+       $("#halfright").append('<img class="playerenemy" src="assets/images/obiwan.jpg">');
+       $("#halfright").css({display: "block"});
+       $("#halfright").append('<img class="playerenemy" src="assets/images/countdooku.jpg">');
+       $("#halfright").css({display: "block"});
       }
 
 
-    $(qui).on("click", function() {
-        
-            
+    $(obi).on("click", function() {
+           
             $(qui).fadeOut(1000);
             $(darth).fadeOut(1000);
             $(count).fadeOut(1000);
             $(obi).fadeOut(1000);
-            setTimeout(showPlayer, 1000);
-            
-        
+            setTimeout(showPlayerObi, 1000); 
     });
-        // $(qui).removeAttr( "class", "player" );
 
+    $(qui).on("click", function() {
+           
+            $(qui).fadeOut(1000);
+            $(darth).fadeOut(1000);
+            $(count).fadeOut(1000);
+            $(obi).fadeOut(1000);
+            setTimeout(showPlayerQui, 1000); 
+    });
 
-    // });
-    // // $(qui).animate({ height: "300px", width: "300px" }, 3000);
-    // $(darth).on("click", function() {
+    $(count).on("click", function() {
+           
+            $(qui).fadeOut(1000);
+            $(darth).fadeOut(1000);
+            $(count).fadeOut(1000);
+            $(obi).fadeOut(1000);
+            setTimeout(showPlayerCount, 1000); 
+    });
 
-    //     $("div").blur();
-
-    // });
-    // $(count).on("click", function() {
-    //     $(count).css({ border: "solid 8px green" });
-    //     $(darth).remove();
-    //     $(qui).remove();
-    //     $(obi).remove();
-    // });
-    // $(obi).on("click", function() {
-    //     $(obi).css({ border: "solid 8px green" });
-    //     $(darth).remove();
-    //     $(count).remove();
-    //     $(qui).remove();
-    // });
-
-
-    // console.log(clicked);
-    //  qui.on("click", clickit(qui) );
-    //  obi.on("click",  );
-    //  darth.on("click",  );
-    //  count.on("click",  );
-
-    //      function clickit(x) {
-    //          $(x).css({ border: "solid 8px green" });
-    //      }
-
-
-
-    // var countdown;
-    // function startCountdown()
-    // var countdown = setInterval(decrement, 1000);
+    $(darth).on("click", function() {
+           
+            $(qui).fadeOut(1000);
+            $(darth).fadeOut(1000);
+            $(count).fadeOut(1000);
+            $(obi).fadeOut(1000);
+            setTimeout(showPlayerDarth, 1000); 
+    });
+   
 });

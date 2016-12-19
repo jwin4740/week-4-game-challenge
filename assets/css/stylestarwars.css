@@ -13,35 +13,36 @@ body {
     width: 100%;
 }
 
-p{
+p {
     margin-bottom: 0px;
 }
 
-#entrancemaul{
+#entrancemaul {
     position: relative;
     height: 300px;
     width: 500px;
 }
 
-#arena{
+#arena {
     display: none;
     overflow: hidden;
     background-image: url(../images/setting.png);
     background-size: cover;
     border: solid 5px white;
-    position: absolute; 
-    top: 20px; 
-    left: 175px; 
-    width: 1000px; 
+    position: absolute;
+    top: 20px;
+    left: 175px;
+    width: 1000px;
     height: 600px;
 }
 
-#chosen{
+#chosen {
     display: inline-block;
     margin-left: 25px;
     position: relative;
 }
-#selected{
+
+#selected {
     position: absolute;
     border: solid 5px white;
     height: 300px;
@@ -50,24 +51,22 @@ p{
     left: 500px;
 }
 
-.enemy{
+.enemy {
     float: left;
     margin-left: 25px;
     border: solid 8px red;
 }
 
-.clicked{
+.clicked {
     position: absolute;
     border: solid 8px red;
     height: 300px;
     width: 300px;
     top: 200px;
     left: 500px;
-   
-
 }
 
-pre{
+pre {
     background: none;
     color: yellow;
     padding: 0px;
@@ -77,15 +76,17 @@ pre{
     overflow: hidden;
     border: none;
 }
-#instructions{
+
+#instructions {
     height: 150px;
 }
 
-#playerbox{
+#playerbox {
     margin-left: 130px;
     float: left;
 }
-.player{
+
+.player {
     height: 200px;
     width: 200px;
     background-image: cover;
@@ -94,9 +95,9 @@ pre{
     padding: 5px;
 }
 
-.playerselect{
-    height: 275px;
-    width: 275px;
+.playerselect {
+    height: 200px;
+    width: 200px;
     background-image: cover;
     cursor: pointer;
     opacity: 0.8;
@@ -104,7 +105,18 @@ pre{
     border: solid 5px green;
 }
 
-.playerdiv{
+.playerenemy {
+    height: 200px;
+    width: 200px;
+    background-image: cover;
+    cursor: pointer;
+    opacity: 0.8;
+    padding: 5px;
+    border: solid 5px red;
+    margin-right: 15px;
+}
+
+.playerdiv {
     overflow: hidden;
     padding: 5px;
     border: solid 1px white;
@@ -112,9 +124,9 @@ pre{
     margin-left: 5px;
     display: inline-block;
     text-align: center;
-    }
+}
 
-.playerdivonhover{
+.playerdivonhover {
     overflow: hidden;
     padding: 5px;
     border: solid 5px yellow;
@@ -122,22 +134,36 @@ pre{
     margin-left: 5px;
     display: inline-block;
     text-align: center;
-    }
+}
 
-#selectedplayer{
+#halfleft{
+    float: left;
+    margin-right: 50px;
+    width: 30%;
+    height: 325px;
+    display: none;
+}
+
+#halfright{
+    float: left;
+    margin-left: 100px;
+    width: 50%;
+    height: 325px;
+    display: none;
+
+}
+
+
+
+#selectedplayer {
     clear: both;
-    position: absolute;
-   height: 325px;
-   width: 400px;
-   top: 215px;
-   left: 500px;
-   
-   font-size: 24px;
-   text-align: center;
-    }
+    height: 325px;
+    
+    font-size: 18px;
+    text-align: center;
+}
 
-
-.lightsaber{
+.lightsaber {
     position: absolute;
     z-index: 100;
     border: solid 1px white;
@@ -146,27 +172,22 @@ pre{
     width: 12px;
     top: 110px;
     left: 75px;
-    border-bottom-left-radius: 9px; 
+    border-bottom-left-radius: 9px;
     border-bottom-right-radius: 9px;
-    
-    
-    
 }
 
-.obiwan{
+.obiwan {
     width: 400px;
     height: 400px;
 }
 
-.right{
+.right {
     position: relative;
-   height: 200px;
-   width: 200px;
-   background-color: red;
+    height: 200px;
+    width: 200px;
+    background-color: red;
 }
 
-
-
-#go{
-    clear:both;
+#go {
+    clear: both;
 }
