@@ -140,13 +140,13 @@ pre {
     float: left;
     margin-right: 50px;
     width: 30%;
-    height: 325px;
+    height: 250px;
     display: none;
 }
 
 #halfright{
     float: left;
-    margin-left: 100px;
+    
     width: 50%;
     height: 325px;
     display: none;
@@ -155,10 +155,9 @@ pre {
 
 
 
-#selectedplayer {
+.selectedplayer {
     clear: both;
-    height: 325px;
-    
+    height: 300px;
     font-size: 18px;
     text-align: center;
 }
