@@ -54,7 +54,7 @@ function fIntro() {
                 hoversound();
 
                 $(idname).on("mouseleave", function() {
-                    $(idname).css({ border: "solid 1px white" });
+                    $(idname).css({ border: "none" });
 
                 });
             });

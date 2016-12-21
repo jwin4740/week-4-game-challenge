@@ -4,6 +4,7 @@ var darthCounter;
 var countCounter;
 var obiCounter;
 var characterArray = [];
+var characteridArray = [];
 var player = false;
 
 
@@ -45,12 +46,24 @@ $("#playerthree").attr("data-dooku", charThree);
 $("#playerfour").attr("data-maul", charFour);
     
     
-fIntro();
 
-    var qui = "#forcequi";
-    var darth = "#forcedarth";
     var obi = "#forceobi";
+    var qui = "#forcequi";
     var count = "#forcecount";
+    var darth = "#forcedarth";
+    
+    var playerone = "#playerone";
+    var playertwo = "#playertwo";
+    var playerthree = "#playerthree";
+    var playerfour = "#playerfour";
+    
+
+fIntro();
+    characteridArray.push(playerone);
+    characteridArray.push(playertwo);
+    characteridArray.push(playerthree);
+    characteridArray.push(playerfour);
+    console.log(characteridArray);
 
 
     selectCharacter();
@@ -60,43 +73,41 @@ fIntro();
 
 
 
+// whichever character is clicked all will dissapear
+    $("div[id^='force']").on("click", function() {
 
-    $(obi).on("click", function() {
-
-        $(qui).fadeOut(1000);
-        $(darth).fadeOut(1000);
-        $(count).fadeOut(1000);
-        $(obi).fadeOut(1000);
+        $("div[id^='force']").fadeOut(1000);
         setTimeout(showPlayerObi, 1000);
     });
 
-    $(qui).on("click", function() {
+  
+    // $(qui).on("click", function() {
 
-        $(qui).fadeOut(1000);
-        $(darth).fadeOut(1000);
-        $(count).fadeOut(1000);
-        $(obi).fadeOut(1000);
-        setTimeout(showPlayerQui, 1000);
+    //     $(qui).fadeOut(1000);
+    //     $(darth).fadeOut(1000);
+    //     $(count).fadeOut(1000);
+    //     $(obi).fadeOut(1000);
+    //     setTimeout(showPlayerQui, 1000);
 
-    });
+    // });
 
-    $(count).on("click", function() {
+    // $(count).on("click", function() {
 
-        $(qui).fadeOut(1000);
-        $(darth).fadeOut(1000);
-        $(count).fadeOut(1000);
-        $(obi).fadeOut(1000);
-        setTimeout(showPlayerCount, 1000);
-    });
+    //     $(qui).fadeOut(1000);
+    //     $(darth).fadeOut(1000);
+    //     $(count).fadeOut(1000);
+    //     $(obi).fadeOut(1000);
+    //     setTimeout(showPlayerCount, 1000);
+    // });
 
-    $(darth).on("click", function() {
+    // $(darth).on("click", function() {
 
-        $(qui).fadeOut(1000);
-        $(darth).fadeOut(1000);
-        $(count).fadeOut(1000);
-        $(obi).fadeOut(1000);
-        setTimeout(showPlayerDarth, 1000);
-    });
+    //     $(qui).fadeOut(1000);
+    //     $(darth).fadeOut(1000);
+    //     $(count).fadeOut(1000);
+    //     $(obi).fadeOut(1000);
+    //     setTimeout(showPlayerDarth, 1000);
+    // });
     // console.log(player);
 
     // if (player === true) {

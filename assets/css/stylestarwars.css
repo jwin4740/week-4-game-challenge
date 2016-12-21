@@ -67,13 +67,14 @@ p {
 }
 
 #playerbox {
+    margin-top: 10px;
     margin-left: 130px;
-    float: left;
+    display: inline-block;
 }
 
 .player {
-    height: 200px;
-    width: 200px;
+    height: 250px;
+    width: 250px;
     background-image: cover;
     cursor: pointer;
     opacity: 0.8;
@@ -103,11 +104,13 @@ p {
 
 .playerdiv {
     overflow: hidden;
+    float: left;
     padding: 5px;
     cursor: pointer;
     margin-left: 5px;
     display: inline-block;
     text-align: center;
+    border: none;
 }
 
 .playerdivonhover {
