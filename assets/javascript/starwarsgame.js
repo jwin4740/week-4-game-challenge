@@ -3,7 +3,7 @@ var quiCounter;
 var darthCounter;
 var countCounter;
 var obiCounter;
-
+var characterArray = [];
 var player = false;
 
 
@@ -26,9 +26,25 @@ $(document).ready(function() {
     var charTwo = new Character("QuigonGinn", 200, 14, 20);
     var charThree = new Character("CountDooku", 250, 16, 25);
     var charFour = new Character("DarthMaul", 150, 18, 30);
-
-
     
+     //fill character array
+    characterArray.push(charOne);
+    characterArray.push(charTwo);
+    characterArray.push(charThree);
+    characterArray.push(charFour);
+
+    console.log(characterArray);
+
+
+    //choose your character
+
+
+   
+
+
+
+
+
 
 
 
@@ -57,7 +73,7 @@ $(document).ready(function() {
         }
     };
 
-   
+// end lightsaber sound effects
     // END OF FUNCTIONS 
 
 
@@ -66,7 +82,7 @@ $(document).ready(function() {
     //--------------GAME STARTS---------------
 
 
-
+    
     var qui = "#qui";
     var darth = "#darth";
     var obi = "#obi";
@@ -75,9 +91,19 @@ $(document).ready(function() {
 
     console.log(player);
     selectCharacter();
+    fIntro();
 
 
-    
+$(document).on("click", function(event) {
+        if($(event.target).is("#playerdiv"))
+        {
+            console.log("score got it");
+        }
+        else
+        {
+            console.log("random");
+        }
+    });
 
 
 
