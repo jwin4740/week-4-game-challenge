@@ -17,13 +17,9 @@ p {
     margin-bottom: 0px;
 }
 
-#entrancemaul {
-    position: relative;
-    height: 300px;
-    width: 500px;
-}
 
-#arena {
+
+/*#arena {
     display: none;
     overflow: hidden;
     background-image: url(../images/setting.png);
@@ -35,36 +31,21 @@ p {
     width: 1000px;
     height: 600px;
 }
-
-#chosen {
-    display: inline-block;
-    margin-left: 25px;
-    position: relative;
-}
-
-#selected {
-    position: absolute;
-    border: solid 5px white;
-    height: 300px;
-    width: 300px;
-    top: 200px;
-    left: 500px;
-}
+*/
 
 .enemy {
-    float: left;
+   
     margin-left: 25px;
     border: solid 8px red;
 }
 
-.clicked {
-    position: absolute;
-    border: solid 8px red;
-    height: 300px;
-    width: 300px;
-    top: 200px;
-    left: 500px;
+.attacker {
+   
+    margin-left: 25px;
+    border: solid 8px green;
 }
+
+
 
 #playerbox {
     margin-top: 10px;
@@ -113,39 +94,13 @@ p {
     
 }
 
-.playerdivonhover {
-    overflow: hidden;
-    padding: 5px;
-    border: solid 5px yellow;
-    cursor: pointer;
-    margin-left: 5px;
-    display: inline-block;
-    text-align: center;
-}
 
-#halfleft {
-    float: left;
-    margin-right: 50px;
-    width: 30%;
-    height: 250px;
-    display: none;
-}
 
-#halfright {
-    float: left;
-    width: 50%;
-    height: 325px;
-    display: none;
-}
 
-.selectedplayer {
-    clear: both;
-    height: 300px;
-    font-size: 18px;
-    text-align: center;
-}
 
-.lightsaber {
+
+
+/*.lightsaber {
     position: absolute;
     z-index: 100;
     border: solid 1px white;
@@ -158,18 +113,4 @@ p {
     border-bottom-right-radius: 9px;
 }
 
-.obiwan {
-    width: 400px;
-    height: 400px;
-}
-
-.right {
-    position: relative;
-    height: 200px;
-    width: 200px;
-    background-color: red;
-}
-
-#go {
-    clear: both;
-}
+*/

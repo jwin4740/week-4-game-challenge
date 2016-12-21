@@ -6,7 +6,11 @@ var obiCounter;
 var characterArray = [];
 var idArray = [];
 var proceed = false;
-
+var obiAttacker = false;
+var quiAttacker = false;
+var countAttacker = false;
+var darthAttacker = false;
+var attacker;
 
 
 $(document).ready(function() {
@@ -78,7 +82,7 @@ $(document).ready(function() {
     // when the user clicks a character it give all the enemies the class of "enemy"
     console.log("proceed is: " + proceed);
     
-    $(document).on("click", function(event) {
+    
 
     $("#choose").on("click", function chooseAttacker() {
         console.log("proceed is: " + proceed);
@@ -89,6 +93,7 @@ $(document).ready(function() {
             $(idArray[1]).addClass("enemy");
             $(idArray[2]).addClass("enemy");
             $(idArray[3]).addClass("enemy");
+            attacker = charOne;
 
         });
 
@@ -125,11 +130,7 @@ $(document).ready(function() {
 
             $(startplayerid).fadeOut(1000);
             setTimeout(showPlayerObi, 1000);
-            if ($(playerone).data("clicked")) {
-                console.log("yeah it equals");
-            } else {
-                console.log(" wa wa");
-            }
+            
         });
 
     });
@@ -179,6 +180,6 @@ $(document).ready(function() {
     // if (player === true) {
     //     console.log("yeah its true!!!")
     // }
-});
+
 
 });
