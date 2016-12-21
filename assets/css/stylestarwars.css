@@ -73,8 +73,8 @@ p {
 }
 
 .player {
-    height: 250px;
-    width: 250px;
+    height: 200px;
+    width: 200px;
     background-image: cover;
     cursor: pointer;
     opacity: 0.8;
@@ -86,7 +86,7 @@ p {
     width: 200px;
     background-image: cover;
     cursor: pointer;
-    opacity: 0.8;
+    opacity: 0.9;
     padding: 5px;
     border: solid 5px green;
 }
@@ -110,7 +110,7 @@ p {
     margin-left: 5px;
     display: inline-block;
     text-align: center;
-    border: none;
+    
 }
 
 .playerdivonhover {
