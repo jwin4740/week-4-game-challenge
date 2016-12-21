@@ -4,7 +4,7 @@ var darthCounter;
 var countCounter;
 var obiCounter;
 var characterArray = [];
-var characteridArray = [];
+var idArray = [];
 var player = false;
 
 
@@ -36,17 +36,6 @@ $(document).ready(function() {
 
     console.log(characterArray);
 
-    //--------------GAME STARTS---------------
-
-//give data attributes to playerdivs
-
-$("#playerone").attr("data-obiwan", charOne);
-$("#playertwo").attr("data-quigon", charTwo);
-$("#playerthree").attr("data-dooku", charThree);
-$("#playerfour").attr("data-maul", charFour);
-    
-    
-
     var obi = "#forceobi";
     var qui = "#forcequi";
     var count = "#forcecount";
@@ -56,28 +45,62 @@ $("#playerfour").attr("data-maul", charFour);
     var playertwo = "#playertwo";
     var playerthree = "#playerthree";
     var playerfour = "#playerfour";
+    var startplayerid = "div[id^='player']";
     
 
-fIntro();
-    characteridArray.push(playerone);
-    characteridArray.push(playertwo);
-    characteridArray.push(playerthree);
-    characteridArray.push(playerfour);
-    console.log(characteridArray);
 
+    idArray.push(playerone);
+    idArray.push(playertwo);
+    idArray.push(playerthree);
+    idArray.push(playerfour);
+    console.log(idArray);
+
+    //--------------GAME STARTS---------------
+
+//give data attributes to playerdivs
+
+$(playerone).attr("data-name", charOne.name).attr("data-hp", charOne.healthPoints).attr("data-ap", charOne.attackPower).attr("data-cap", charOne.counterAttackPower);
+$(playertwo).attr("data-name", charTwo.name).attr("data-hp", charTwo.healthPoints).attr("data-ap", charTwo.attackPower).attr("data-cap", charTwo.counterAttackPower);
+$(playerthree).attr("data-name", charThree.name).attr("data-hp", charThree.healthPoints).attr("data-ap", charThree.attackPower).attr("data-cap", charThree.counterAttackPower);
+$(playerfour).attr("data-name", charFour.name).attr("data-hp", charFour.healthPoints).attr("data-ap", charFour.attackPower).attr("data-cap", charFour.counterAttackPower);
+
+
+
+    
+
+    
+fIntro();
 
     selectCharacter();
     
     console.log("got here");
     console.log(charOne.healthPoints);
-
-
-
+// when the user clicks a character it give all the enemies the class of "enemy"
+    $(playerone).click(function(){
+        $(this).addClass("attacker");
+        $(idArray[1]).addClass("enemy");
+        $(idArray[2]).addClass("enemy");
+        $(idArray[3]).addClass("enemy");
+        console.log($(playerone).attr("class"));
+});
+    
+    
+        
+        console.log($(playerthree).attr("class"));
+    
 // whichever character is clicked all will dissapear
-    $("div[id^='force']").on("click", function() {
-
-        $("div[id^='force']").fadeOut(1000);
+    $(startplayerid).on("click", function() {
+        
+        $(startplayerid).fadeOut(1000);
         setTimeout(showPlayerObi, 1000);
+        if ($(playerone).data("clicked"))
+        {
+            console.log("yeah it equals");
+        }
+        else
+        {
+            console.log(" wa wa");
+        }
     });
 
   
