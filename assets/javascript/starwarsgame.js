@@ -37,29 +37,27 @@ $(document).ready(function() {
 
     //--------------GAME STARTS---------------
 
+//give data attributes to playerdivs
 
+$("#playerone").attr("data-obiwan", charOne);
+$("#playertwo").attr("data-quigon", charTwo);
+$("#playerthree").attr("data-dooku", charThree);
+$("#playerfour").attr("data-maul", charFour);
     
-    var qui = "#qui";
-    var darth = "#darth";
-    var obi = "#obi";
-    var count = "#count";
+    
+fIntro();
+
+    var qui = "#forcequi";
+    var darth = "#forcedarth";
+    var obi = "#forceobi";
+    var count = "#forcecount";
 
 
-    console.log(player);
     selectCharacter();
-    fIntro();
+    
+    console.log("got here");
+    console.log(charOne.healthPoints);
 
-
-$(document).on("click", function(event) {
-        if($(event.target).is("#playerdiv"))
-        {
-            console.log("score got it");
-        }
-        else
-        {
-            console.log("random");
-        }
-    });
 
 
 
@@ -99,11 +97,11 @@ $(document).on("click", function(event) {
         $(obi).fadeOut(1000);
         setTimeout(showPlayerDarth, 1000);
     });
-    console.log(player);
+    // console.log(player);
 
-    if (player === true) {
-        console.log("yeah its true!!!")
-    }
+    // if (player === true) {
+    //     console.log("yeah its true!!!")
+    // }
 
 
 });

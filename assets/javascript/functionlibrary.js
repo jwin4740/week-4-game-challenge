@@ -60,10 +60,10 @@ function fIntro() {
             });
         }
 
-        hoverEnlarge(qui);
-        hoverEnlarge(darth);
-        hoverEnlarge(obi);
-        hoverEnlarge(count);
+        hoverEnlarge("#forcequi");
+        hoverEnlarge("#forcedarth");
+        hoverEnlarge("#forceobi");
+        hoverEnlarge("#forcecount");
     }
 
      // makes player move with arrow keys
