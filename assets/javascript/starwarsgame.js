@@ -35,50 +35,6 @@ $(document).ready(function() {
 
     console.log(characterArray);
 
-
-    //choose your character
-
-
-   
-
-
-
-
-
-
-
-
-
-    // lightsaber sound effects
-    document.onkeyup = function(event) {
-        var userKey = event.key;
-        if (userKey === "d") {
-            fDraw();
-            setTimeout(fBuzz, 1000);
-            setTimeout(sBuzz, 2000);
-        }
-
-        if (userKey === "s") {
-            fContact();
-        }
-
-
-        if (userKey === "w") {
-            fSheath();
-        }
-
-        if (userKey === "w") {
-            setTimeout(fSheath, 500);
-            resetSound();
-        }
-    };
-
-// end lightsaber sound effects
-    // END OF FUNCTIONS 
-
-
-
-
     //--------------GAME STARTS---------------
 
 

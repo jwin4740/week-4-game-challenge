@@ -66,21 +66,6 @@ p {
     left: 500px;
 }
 
-pre {
-    background: none;
-    color: yellow;
-    padding: 0px;
-    font-size: 12px;
-    margin-bottom: 0px;
-    height: 15px;
-    overflow: hidden;
-    border: none;
-}
-
-#instructions {
-    height: 150px;
-}
-
 #playerbox {
     margin-left: 130px;
     float: left;
@@ -119,7 +104,6 @@ pre {
 .playerdiv {
     overflow: hidden;
     padding: 5px;
-    border: solid 1px white;
     cursor: pointer;
     margin-left: 5px;
     display: inline-block;
@@ -136,7 +120,7 @@ pre {
     text-align: center;
 }
 
-#halfleft{
+#halfleft {
     float: left;
     margin-right: 50px;
     width: 30%;
@@ -144,16 +128,12 @@ pre {
     display: none;
 }
 
-#halfright{
+#halfright {
     float: left;
-    
     width: 50%;
     height: 325px;
     display: none;
-
 }
-
-
 
 .selectedplayer {
     clear: both;
