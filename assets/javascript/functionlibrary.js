@@ -108,6 +108,7 @@ function showPlayerObi() {
         $("#halfright").css({ display: "block" });
         $("#halfright").append('<img class="playerenemy" src="assets/images/countdooku.jpg">');
         $("#halfright").css({ display: "block" });
+        $("#playerbox").empty();
         player = true;
         console.log(player);
         if (player === true) {

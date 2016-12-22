@@ -102,6 +102,7 @@ $(document).ready(function() {
     selectCharacter();
     // you chose obiwan as your attacker
     $(playerone).click(function() {
+        $("#playerbox").empty();
         attacker = obiElement;
         defender1 = quiElement;
         defender2 = countElement;
@@ -164,7 +165,7 @@ $(document).ready(function() {
         $(startplayerid).fadeOut(1000);
         setTimeout(showPlayerObi, 1000);
 
-    });
+    })
 
 
     console.log("proceed1 is: " + proceed1);
@@ -174,67 +175,91 @@ $(document).ready(function() {
         if (proceed1 === true) {
 
             $("#stageset").css({ float: "left", border: "solid 2px white", width: "100%", height: "250px" });
-            $("#enemyondeck").css({ float: "left", border: "solid 2px white", width: "100%", height: "250px" });
+            $("#enemyondeck").css({ float: "left", border: "solid 2px white", width: "100%", height: "100px" });
             $("#attacker").html(attacker);
 
             $("#enemyondeck").append(defender1);
             $("#enemyondeck").append(defender2);
             $("#enemyondeck").append(defender3);
             $(idArray[a]).addClass("attacker");
-            $(idArray[x]).addClass("enemy");
-            $(idArray[y]).addClass("enemy");
-            $(idArray[z]).addClass("enemy");
+            $(idArray[x]).addClass("enemy1");
+            $(idArray[y]).addClass("enemy2");
+            $(idArray[z]).addClass("enemy3");
             proceed2 = true;
             console.log("proceed2 is: " + proceed2);
 
-        } else {
+        } 
+        else {
             console.log("no non no");
         }
-    });
+    })
 
 
-    
-        $("#enemyondeck").on("click", function(event){
-            if (proceed2 === true)
-            {
+
+    $("div#playertwo").on("click", function(event) {
+        if (proceed2 === true) {
             console.log("fightframe");
             $(idArray[x]).remove();
             $("#currentenemy").append(defender1);
+            $(idArray[x]).addClass("currentenemy");
 
         }
+        proceed3 = true;
+    })
 
-        });
+    // $("#enemyondeck").on("click", function(event) {
+    //     if (proceed3 === true) {
+    //         console.log("fightframe");
+    //         $(idArray[y]).remove();
+    //         $("#currentenemy").append(defender2);
+    //         $(idArray[y]).addClass("currentenemy");
+    //         proceed4 = true;
+    //     }
 
-        //  $(idArray[x]).on("click", function(event){
-        //     if (proceed2 === true)
-        //     {
-        //     console.log("fightframe");
-        //     $("#currentenemy").append(idArray[x]);
+    // })
 
-        // }
+    // $("#enemyondeck").on("click", function(event) {
+    //     if (proceed4 === true) {
+    //         console.log("fightframe");
+    //         $(idArray[z]).remove();
+    //         $("#currentenemy").append(defender3);
+    //         $(idArray[z]).addClass("currentenemy");
+    //         proceed5 = true;
+    //     }
 
-        // });
+    // })
 
-        //  $(idArray[x]).on("click", function(event){
-        //     if (proceed2 === true)
-        //     {
-        //     console.log("fightframe");
-        //     $("#currentenemy").append(idArray[x]);
+    });
+    //  $(idArray[x]).on("click", function(event){
+    //     if (proceed2 === true)
+    //     {
+    //     console.log("fightframe");
+    //     $("#currentenemy").append(idArray[x]);
 
-        // }
+    // }
 
-        // });
-        
-        //  $(idArray[x]).on("click", function(event){
-        //     if (proceed2 === true)
-        //     {
-        //     console.log("fightframe");
-        //     $("#currentenemy").append(idArray[x]);
+    // });
 
-        // }
+    //  $(idArray[x]).on("click", function(event){
+    //     if (proceed2 === true)
+    //     {
+    //     console.log("fightframe");
+    //     $("#currentenemy").append(idArray[x]);
 
-        // }); 
-    
+    // }
+
+    // });
+
+    //  $(idArray[x]).on("click", function(event){
+    //     if (proceed2 === true)
+    //     {
+    //     console.log("fightframe");
+    //     $("#currentenemy").append(idArray[x]);
+
+    // }
+
+    // }); 
+
     // whichever character is clicked all will dissapear
 
 
@@ -265,11 +290,11 @@ $(document).ready(function() {
     //     $(obi).fadeOut(1000);
     //     setTimeout(showPlayerDarth, 1000);
     // });
-    // console.log(player);
+
 
     // if (player === true) {
     //     console.log("yeah its true!!!")
     // }
 
 
-});
+
