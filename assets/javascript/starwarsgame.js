@@ -11,8 +11,13 @@ var quiAttacker = false;
 var countAttacker = false;
 var darthAttacker = false;
 var attacker;
-
-
+var obiElement = '<div id="playerbox"><div class="playerdiv" id="playerone"><p>Obi-wan Kenobi 175 HP</p><img class="player" src="assets/images/obiwan.jpg"></div>';
+var quiElement = '<div class="playerdiv" id="playertwo"><p>Qui-gon Ginn175 HP</p><img class="player" src="assets/images/quigon.jpeg"></div>';
+var countElement = '<div class="playerdiv" id="playerthree"><p>Count Dooku 175 HP</p><img class="player" src="assets/images/countdooku.jpg"></div>';
+var darthElement = '<div class="playerdiv" id="playerfour"><p>Darth Maul 175 HP</p><img class="player" src="assets/images/darthmaul.jpeg"></div>';
+var defender1;
+var defender2;
+var defender3;
 $(document).ready(function() {
 
 
@@ -93,17 +98,28 @@ $(document).ready(function() {
             $(idArray[1]).addClass("enemy");
             $(idArray[2]).addClass("enemy");
             $(idArray[3]).addClass("enemy");
-            attacker = charOne;
+            attacker = obiElement;
+            defender1 = quiElement;
+            defender2 = countElement;
+            defender3 = darthElement;
+
+            console.log(attacker);
 
         });
 
         // you chose quigonn as your attacker
         $(playertwo).click(function() {
             $(this).addClass("attacker");
+            attacker = quiElement;
+            defender1 = obiElement;
+            defender2 = countElement;
+            defender3 = darthElement;
+            
             $(idArray[0]).addClass("enemy");
             $(idArray[2]).addClass("enemy");
             $(idArray[3]).addClass("enemy");
-            console.log($(playerone).attr("class"));
+            
+            console.log(attacker);
         });
 
         // you chose countdooku as your attacker
@@ -112,7 +128,11 @@ $(document).ready(function() {
             $(idArray[1]).addClass("enemy");
             $(idArray[0]).addClass("enemy");
             $(idArray[3]).addClass("enemy");
-            console.log($(playerone).attr("class"));
+            attacker = countElement;
+            defender1 = obiElement;
+            defender2 = quiElement;
+            defender3 = darthElement;
+            console.log(attacker);
         });
 
         // you chose darthmaul as your attacker
@@ -121,10 +141,14 @@ $(document).ready(function() {
             $(idArray[1]).addClass("enemy");
             $(idArray[2]).addClass("enemy");
             $(idArray[0]).addClass("enemy");
-            console.log($(playerone).attr("class"));
+            attacker = darthElement;
+            defender1 = obiElement;
+            defender2 = quiElement;
+            defender3 = countElement;
+            console.log(attacker);
         });
         console.log("proceed is: " + proceed);
-        proceed = true;
+       
         console.log("proceed is: " + proceed);
         $(startplayerid).on("click", function() {
 
@@ -132,19 +156,30 @@ $(document).ready(function() {
             setTimeout(showPlayerObi, 1000);
             
         });
-
+        proceed = true;
     });
     console.log("proceed is: " + proceed);
 
-    if(proceed === true)
-    {
-        console.log("yeah it is truedasdfs");
-    }
-    else
-    {
-        console.log("it aint");
-    }
 
+    $("#frame1").on("click", function (event){
+        if (proceed === true)
+        {
+            $("#stageset").css({float: "left", border: "solid 2px white", width: "100%", height: "250px"});
+            $("#enemyondeck").css({float: "left", border: "solid 2px white", width: "100%", height: "250px"});
+            $("#attacker").html(attacker);
+            $("#enemyondeck").html(defender1);
+            $("#enemyondeck").append(defender2);
+            $("#enemyondeck").append(defender3);
+
+        }
+        else
+        {
+            console.log("no non no");
+        }
+   
+        
+    
+});
     // whichever character is clicked all will dissapear
 
 

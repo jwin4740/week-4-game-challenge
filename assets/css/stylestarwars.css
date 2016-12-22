@@ -13,10 +13,13 @@ body {
     width: 100%;
 }
 
+button {
+    background-color: black;
+}
+
 p {
     margin-bottom: 0px;
 }
-
 
 
 /*#arena {
@@ -33,23 +36,22 @@ p {
 }
 */
 
+#currentenemy {
+    margin-left: 25px;
+    border: solid 5px red;
+}
+
 .enemy {
-   
     margin-left: 25px;
-    border: solid 8px red;
+    border: solid 5px red;
 }
 
-.attacker {
-   
-    margin-left: 25px;
-    border: solid 8px green;
+#attacker {
+    border: solid 5px green;
 }
-
-
 
 #playerbox {
     margin-top: 10px;
-    margin-left: 130px;
     display: inline-block;
 }
 
@@ -59,7 +61,6 @@ p {
     background-image: cover;
     cursor: pointer;
     opacity: 0.8;
-    padding: 5px;
 }
 
 .playerselect {
@@ -68,7 +69,6 @@ p {
     background-image: cover;
     cursor: pointer;
     opacity: 0.9;
-    padding: 5px;
     border: solid 5px green;
 }
 
@@ -86,18 +86,11 @@ p {
 .playerdiv {
     overflow: hidden;
     float: left;
-    padding: 5px;
     cursor: pointer;
-    margin-left: 5px;
+    margin-left: 10px;
     display: inline-block;
     text-align: center;
-    
 }
-
-
-
-
-
 
 
 /*.lightsaber {
