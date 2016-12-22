@@ -53,11 +53,11 @@ function fIntro() {
         function hoverEnlarge(idname) {
 
             $(idname).on("mouseenter", function() {
-                $(idname).css({ border: "solid 5px yellow" });
+                $(idname).addClass("hover");
                 hoversound();
 
                 $(idname).on("mouseleave", function() {
-                    $(idname).css({ border: "none" });
+                    $(idname).removeClass("hover");
 
                 });
             });

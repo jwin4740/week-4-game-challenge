@@ -36,17 +36,20 @@ p {
 }
 */
 
-#currentenemy {
-    margin-left: 25px;
-    border: solid 5px red;
+.hover{
+    border: solid 5px yellow;
 }
 
 .enemy {
     margin-left: 25px;
-    border: solid 5px red;
+    border: solid 5px purple;
 }
 
-#attacker {
+.currentenemy {
+    margin-left: 25px;
+    border: solid 5px red;
+}
+.attacker {
     border: solid 5px green;
 }
 
