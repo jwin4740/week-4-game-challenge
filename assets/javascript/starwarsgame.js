@@ -2,7 +2,7 @@
 var quiCounter;
 var darthCounter;
 var countCounter;
-var obiCounter;
+
 var characterArray = [];
 var idArray = [];
 var proceed1 = false;
@@ -102,7 +102,7 @@ $(document).ready(function() {
     selectCharacter();
     // you chose obiwan as your attacker
     $(playerone).click(function() {
-        $("#playerbox").empty();
+        
         attacker = obiElement;
         defender1 = quiElement;
         defender2 = countElement;
