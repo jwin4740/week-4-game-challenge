@@ -23,19 +23,20 @@ function fIntro() {
 
 
     // prototype object
-    function Character(name, hP, aP, cAP, id, num, nameheader, imagesource) {
+    function Character(name, hP, aP, cAP, id, num, imagesource, hpclass) {
         this.name = name;
         this.hP = hP;
         this.aP = aP;
         this.cAP = cAP;
-        this.ele = '<div ' + id + 'class="player" data-value="' + num + '"><h4>' + nameheader + '</h4><img class="pimage" src="assets/images/' + imagesource + '</div>';
+        this.ele = '<div ' + id + 'class="player" data-value="' + num + '"><h4>' + this.name + '</h4><img class="pimage" src="assets/images/' + imagesource + '<h4 class=' + hpclass + '>' + this.hP +  '  hP</div>';
+        this.class = hpclass;
     };
 
 
-    var charOne = new Character("ObiwanKenobi", 175, 12, 15, 'id="obi" ', 1, 'Obi-wan Kenobi', 'obiwan.jpg">');
-    var charTwo = new Character("QuigonGinn", 200, 14, 20, 'id="qui" ', 2, 'Qui-gon Ginn', 'quigon.jpeg">');
-    var charThree = new Character("CountDooku", 250, 16, 25, 'id="count" ', 3, 'Count Dooku', 'countdooku.jpg">');
-    var charFour = new Character("DarthMaul", 150, 18, 30, 'id="darth" ', 4, 'Darth Maul', 'darthmaul.jpeg">');
+    var charOne = new Character("ObiwanKenobi", 175, 12, 15, 'id="obi" ', 1,  'obiwan.jpg">', 'obiclass');
+    var charTwo = new Character("QuigonGinn", 200, 14, 20, 'id="qui" ', 2,  'quigon.jpeg">', 'quiclass');
+    var charThree = new Character("CountDooku", 250, 16, 25, 'id="count" ', 3,  'countdooku.jpg">', 'countclass');
+    var charFour = new Character("DarthMaul", 150, 18, 30, 'id="darth" ', 4, 'darthmaul.jpeg">', 'darthclass');
 
     //fill character array
     cArray.push(charOne);
@@ -92,7 +93,8 @@ function fIntro() {
             currentdefender.hP = currentdefender.hP - attacker.aP;
             attacker.aP = attacker.aP + 15;
             attacker.hP = attacker.hP - currentdefender.cAP;
-
+            $('.' + attacker.class).html(attacker.hP + " hP");
+            $('.' + currentdefender.class).html(currentdefender.hP + " hP");
             console.log("attacker health is now : " + attacker.hP);
             console.log("currentdefender health is now: " + currentdefender.hP);
             $("#gamewindow").html("You attacked " + currentdefender.name + "for " + attacker.aP + " damage!!" + "<br>");
@@ -103,12 +105,15 @@ function fIntro() {
             if(currentdefender.hP <= 0)
             {
                 $("#defenderbox").append("You have defeated your opponent!!! Choose your next opponent");
+                checkpoint3 = false;
                 checkpoint2 = false;
 
             }
-            else if(attacker.hP <= 0)
+            if(attacker.hP <= 0)
             {
                 $("#defenderbox").append("You have been defeated!!!");
+                checkpoint3 = false;
+                checkpoint2 = false;
             }
         }
 
