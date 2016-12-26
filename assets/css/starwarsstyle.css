@@ -1,0 +1,84 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("../images/mainspace.jpg");
+    background-size: cover;
+    position: absolute;
+    z-index: -1;
+    color: white;
+    text-align: center;
+    width: 100%;
+}
+
+/*player images*/
+.pimage{
+    width: 175px;
+    height: 150px; 
+}
+h4{
+    margin: 3px;
+}
+
+.player{
+    float: left;
+    margin: 0px 10px 0px 10px;
+    border: solid 5px purple;
+}
+
+.player:hover{
+    float: left;
+    margin: 0px 10px 0px 10px;
+    border: solid 5px yellow;
+    cursor: pointer;
+}
+
+#gamewindow{
+    float: left;
+    border: solid 2px white;
+    height: 300px;
+    width: 600px;
+}
+#attackerbox{
+    float: left;
+    height: 300px;
+    border: solid 2px white;
+    width: 600px;
+}
+
+.attacker{
+    border: solid 5px green; 
+    float: left;
+    margin: 0px 10px 0px 10px;
+   
+}
+
+#defenderbox{
+    float: left;
+    height: 200px;
+    border: solid 2px white;
+    width: 600px;
+}
+
+#defenderondeckbox{
+    float: left;
+    height: 200px;
+    border: solid 2px white;
+    width: 600px;
+}
+
+
+button{
+    background-color: black;
+    width: 100px;
+    height: 50px;
+    color: white;
+}
+
+.defender{ 
+    float: left;
+    margin: 0px 10px 0px 10px;
+    border: solid 5px red;
+
+}

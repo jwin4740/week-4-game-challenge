@@ -4,21 +4,36 @@
 <head>
     <meta charset="UTF-8">
     <script src="https://code.jquery.com/jquery-2.2.3.js" integrity="sha256-laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4=" crossorigin="anonymous"></script>
-    <script src="assets/javascript/functionlibrary.js"></script>
-    <script src="assets/javascript/starwarsgame.js"></script>
-    <!-- Added a link to Bootstrap-->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <!-- <script src="assets/javascript/functionlibrary.js"></script> -->
+    <script src="assets/javascript/starwars.js"></script>
+
     <!-- <link rel="stylesheet" href=assets/css/reset.css> -->
     <link rel="stylesheet" href="assets/css/jjwstylelibrary.css">
-    <link rel="stylesheet" href="assets/css/stylestarwars.css">
+    <link rel="stylesheet" href="assets/css/starwarsstyle.css">
     <title> STAR WARS </title>
     <link href="https://fonts.googleapis.com/css?family=Bowlby+One+SC" rel="stylesheet">
 </head>
 
 <body>
-    <h2 style="text-align: center; color: yellow; font-family: 'Bowlby One SC', cursive; font-size: 50px; opacity: 0.8;">STAR WARS RPG</h2>
-    <!-- <button id="arenabuttonin">fade in</button>
-<button id="arenabuttonout">fade out</button> -->
+    
+ 
+
+
+<h1> STAR WARS RPG </h1> 
+
+<button class="confirmbutton2">Confirm2</button>
+<div id="choosebox">
+
+</div>
+
+<div id="attackerbox">ATTACKER<button class="confirmbutton">Attack</button>
+</div>
+<div id="gamewindow"></div>
+<div id="defenderbox">DEFENDER
+</div>
+
+<div id="defenderondeckbox">ONDECK
+</div>
     <audio loop id="theme2">
         <source src="assets/av/saberduelcut.mp3" type="audio/mp3">
     </audio>
@@ -37,42 +52,6 @@
     </audio>
     <audio id="hoversound" src="assets/av/switchon.wav">
     </audio>
-    <button id="choose" style="background-color: black;">Choose attacker</button>
-    <button id="frame1"> NEXT </button>
-    <div id="stageset">
-        <div id="attacker" style="margin-left: 100px; float: left;">
-        </div>
-        <div id="currentenemy" style="float: right; margin-right: 250px;">
-        </div>  
-    </div>
-    <div id="enemyondeck" style="clear: both;  margin-right: 15%;">
-    </div>
-    <div id="playerbox"> 
-        <div class="playerdiv" id="playerone">
-            <p>Obi-wan Kenobi 175 HP</p>
-            <img class="player" src="assets/images/obiwan.jpg">
-        </div>
-        <div class="playerdiv" id="playertwo">
-            <p>Qui-gon Ginn175 HP</p>
-            <img class="player" src="assets/images/quigon.jpeg">
-        </div>
-        <div class="playerdiv" id="playerthree">
-            <p>Count Dooku 175 HP</p>
-            <img class="player" src="assets/images/countdooku.jpg">
-        </div>
-        <div class="playerdiv" id="playerfour">
-            <p>Darth Maul 175 HP</p>
-            <img class="player" src="assets/images/darthmaul.jpeg">
-        </div>
-    </div>
-    <!--    <div id="leftsizethirdx250">
-        <p>You will choose a character to be your player by clicking on them. The remaining characters will become your enemies that you have to try and defeat. Click on the first enemy you want to battle, fight them and if you win challenge the next enemy until you beat them all.</p>
-        <p> ATTACKING: "d" key = draw saber, "s" key = attack, "w" key = sheath saber</p>
-    </div>
-    <div id="leftsizethirdx250"></div>
-    <div id="leftsizethirdx250"></div>
-    <div id="arena">
-    </div> -->
 </body>
 
 </html>
