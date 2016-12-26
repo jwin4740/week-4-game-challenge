@@ -12,6 +12,12 @@ body {
     width: 100%;
 }
 
+#instructions{
+    font-size: 20px;
+    color: yellow;
+    margin-bottom: 25px;
+}
+
 /*player images*/
 .pimage{
     width: 175px;
