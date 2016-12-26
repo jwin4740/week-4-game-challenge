@@ -20,7 +20,7 @@ body {
 
 /*player images*/
 .pimage{
-    width: 175px;
+    width: 200px;
     height: 150px; 
 }
 h4{
@@ -30,13 +30,21 @@ h4{
 .player{
     float: left;
     margin: 0px 10px 0px 10px;
-    border: solid 5px purple;
+    border: solid 7px purple;
+    cursor: pointer;
+
 }
 
-.player:hover{
+.hovers {
     float: left;
     margin: 0px 10px 0px 10px;
-    border: solid 5px yellow;
+    border: solid 7px purple;
+}
+
+.hovers:hover {
+    float: left;
+    margin: 0px 10px 0px 10px;
+    border: solid 7px yellow;
     cursor: pointer;
 }
 
@@ -54,7 +62,7 @@ h4{
 }
 
 .attacker{
-    border: solid 5px green; 
+    border: solid 7px green; 
     float: left;
     margin: 0px 10px 0px 10px;
    
@@ -85,6 +93,6 @@ button{
 .defender{ 
     float: left;
     margin: 0px 10px 0px 10px;
-    border: solid 5px red;
+    border: solid 7px red;
 
 }
