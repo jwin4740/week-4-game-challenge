@@ -42,7 +42,7 @@ $(document).ready(function() {
     // user chooses their player which appends to the attacker box, while the remaining players get appended
     // to the defenderondeck box
 
-    // fIntro();
+    fIntro();
 
     function setup() {
         $("#choosebox").append(charOne.ele).append(charTwo.ele).append(charThree.ele).append(charFour.ele);
