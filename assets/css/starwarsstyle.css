@@ -37,12 +37,12 @@ h4{
 #gamewindow{
     float: left;
     border: solid 2px white;
-    height: 300px;
+    height: 250px;
     width: 600px;
 }
 #attackerbox{
     float: left;
-    height: 300px;
+    height: 250px;
     border: solid 2px white;
     width: 600px;
 }
@@ -56,14 +56,14 @@ h4{
 
 #defenderbox{
     float: left;
-    height: 200px;
+    height: 250px;
     border: solid 2px white;
     width: 600px;
 }
 
 #defenderondeckbox{
     float: left;
-    height: 200px;
+    height: 250px;
     border: solid 2px white;
     width: 600px;
 }

@@ -193,3 +193,32 @@ function showPlayerObi() {
             resetSound();
         }
     };
+
+    function attackaction (event){
+       
+                currentdefender.hP = currentdefender.hP - attacker.aP;
+                attacker.aP = attacker.aP + 15;
+                attacker.hP = attacker.hP - currentdefender.cAP;
+                $('.' + attacker.class).html(attacker.hP + " hP");
+                $('.' + currentdefender.class).html(currentdefender.hP + " hP");
+                console.log("attacker health is now : " + attacker.hP);
+                console.log("currentdefender health is now: " + currentdefender.hP);
+                $("#gamewindow").html("You attacked " + currentdefender.name + "for " + attacker.aP + " damage!!" + "<br>");
+                $("#gamewindow").append(currentdefender.name + "attacked you for " + currentdefender.cAP + " damage!!" + "<br>");
+                $("#gamewindow").append("Your hP is now: " + attacker.hP + "<br>");
+                $("#gamewindow").append(currentdefender.name + "'s hP is now: " + currentdefender.hP);
+
+                if (currentdefender.hP <= 0) {
+                    $("#defenderbox").append("You have defeated your opponent!!! Choose your next opponent");
+                    checkpoint3 = false;
+                    checkpoint2 = false;
+
+                }
+                if (attacker.hP <= 0) {
+                    $("#defenderbox").append("You have been defeated!!!");
+                    checkpoint3 = false;
+                    checkpoint2 = false;
+                }
+            
+
+    }

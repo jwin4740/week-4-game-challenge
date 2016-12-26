@@ -15,7 +15,7 @@ var tempval;
 
 $(document).ready(function() {
 
-function fIntro() {
+    function fIntro() {
         $("#theme")[0].volume = 0.5;
         $("#theme")[0].play();
     }
@@ -28,14 +28,14 @@ function fIntro() {
         this.hP = hP;
         this.aP = aP;
         this.cAP = cAP;
-        this.ele = '<div ' + id + 'class="player" data-value="' + num + '"><h4>' + this.name + '</h4><img class="pimage" src="assets/images/' + imagesource + '<h4 class=' + hpclass + '>' + this.hP +  '  hP</div>';
+        this.ele = '<div ' + id + 'class="player" data-value="' + num + '"><h4>' + this.name + '</h4><img class="pimage" src="assets/images/' + imagesource + '<h4 class=' + hpclass + '>' + this.hP + '  hP</div>';
         this.class = hpclass;
     };
 
 
-    var charOne = new Character("ObiwanKenobi", 175, 12, 15, 'id="obi" ', 1,  'obiwan.jpg">', 'obiclass');
-    var charTwo = new Character("QuigonGinn", 200, 14, 20, 'id="qui" ', 2,  'quigon.jpeg">', 'quiclass');
-    var charThree = new Character("CountDooku", 250, 16, 25, 'id="count" ', 3,  'countdooku.jpg">', 'countclass');
+    var charOne = new Character("ObiwanKenobi", 175, 12, 15, 'id="obi" ', 1, 'obiwan.jpg">', 'obiclass');
+    var charTwo = new Character("QuigonGinn", 200, 14, 20, 'id="qui" ', 2, 'quigon.jpeg">', 'quiclass');
+    var charThree = new Character("CountDooku", 250, 16, 25, 'id="count" ', 3, 'countdooku.jpg">', 'countclass');
     var charFour = new Character("DarthMaul", 150, 18, 30, 'id="darth" ', 4, 'darthmaul.jpeg">', 'darthclass');
 
     //fill character array
@@ -83,41 +83,38 @@ function fIntro() {
             checkpoint2 = true;
             $("#defenderbox").append();
             checkpoint3 = true;
-    }
-});
+        }
+    });
 
-    $(".confirmbutton").on("click", function() {
-        if (checkpoint3)
-        {
-            
-            currentdefender.hP = currentdefender.hP - attacker.aP;
-            attacker.aP = attacker.aP + 15;
-            attacker.hP = attacker.hP - currentdefender.cAP;
-            $('.' + attacker.class).html(attacker.hP + " hP");
-            $('.' + currentdefender.class).html(currentdefender.hP + " hP");
-            console.log("attacker health is now : " + attacker.hP);
-            console.log("currentdefender health is now: " + currentdefender.hP);
-            $("#gamewindow").html("You attacked " + currentdefender.name + "for " + attacker.aP + " damage!!" + "<br>");
-            $("#gamewindow").append(currentdefender.name + "attacked you for " + currentdefender.cAP +  " damage!!" + "<br>");
-            $("#gamewindow").append("Your hP is now: " + attacker.hP + "<br>");
-            $("#gamewindow").append(currentdefender.name + "'s hP is now: " + currentdefender.hP);
-           
-            if(currentdefender.hP <= 0)
-            {
-                $("#defenderbox").append("You have defeated your opponent!!! Choose your next opponent");
-                checkpoint3 = false;
-                checkpoint2 = false;
-
-            }
-            if(attacker.hP <= 0)
-            {
-                $("#defenderbox").append("You have been defeated!!!");
-                checkpoint3 = false;
-                checkpoint2 = false;
+    $(document).on("keypress", function() {
+        if (checkpoint3) {
+            if (event.key === "s") {
+                setTimeout(attackaction, 3000);
             }
         }
 
     });
     // --------------------------------------------------
+    document.onkeyup = function(event) {
+        var userKey = event.key;
+        if (userKey === "d") {
+            fDraw();
+            setTimeout(fBuzz, 1000);
+            setTimeout(sBuzz, 2000);
+        }
 
+        if (userKey === "s") {
+            fContact();
+        }
+
+
+        if (userKey === "w") {
+            fSheath();
+        }
+
+        if (userKey === "w") {
+            setTimeout(fSheath, 500);
+            resetSound();
+        }
+    };
 });
