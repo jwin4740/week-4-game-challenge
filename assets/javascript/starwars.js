@@ -50,6 +50,8 @@ $(document).ready(function() {
         $("#choosebox").append(charOne.ele).append(charTwo.ele).append(charThree.ele).append(charFour.ele);
     }
     setup();
+
+    // play click sound on hover
     $('.player').on("mouseover", function() {
         if ($(this).hasClass("attacker"))
         {
@@ -73,6 +75,8 @@ $(document).ready(function() {
         }
 
     });
+
+    // onclick move your selection to the attacker box and append the rest to the ondeck box
     $('.player').on("click", function() {
         if (!checkpoint1) {
             $(this).siblings().addClass("defender").appendTo("#defenderondeckbox");
@@ -85,6 +89,7 @@ $(document).ready(function() {
         }
     });
 
+// choose your current defender
     $("#defenderondeckbox").on("click", ".player.defender", function() {
         if (!checkpoint2) {
             
@@ -107,19 +112,21 @@ $(document).ready(function() {
         }
         checkpoint4 = false;
     });
-
+// press the s key to attack your opponent
     $(document).on("keypress", function() {
         if (checkpoint3) {
             if (event.key === "s") {
-                setTimeout(attackaction, 100);
+                setTimeout(attackaction, 3000);
             }
         }
 
     });
     // --------------------------------------------------
-    
+    // click the play again button to replay
     $("#replay").on("click", reload);
 
+    
+    // sound effects
     document.onkeyup = function(event) {
         var userKey = event.key;
         if (userKey === "d") {
