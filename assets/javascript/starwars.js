@@ -9,6 +9,8 @@ var checkpoint3 = false;
 var tempval;
 var clicksoundinitial = true;
 var clicksounddefender = true;
+var attackerfixedattack;
+var checkpoint4 = true;
 
 
 $(document).ready(function() {
@@ -24,10 +26,10 @@ $(document).ready(function() {
     };
 
     // make Character objects for each player
-    var charOne = new Character("ObiwanKenobi", 175, 12, 15, 'id="obi" ', 1, 'obiwan.jpg">', 'obiclass');
-    var charTwo = new Character("QuigonGinn", 200, 14, 20, 'id="qui" ', 2, 'quigon.jpeg">', 'quiclass');
-    var charThree = new Character("CountDooku", 250, 16, 25, 'id="count" ', 3, 'countdooku.jpg">', 'countclass');
-    var charFour = new Character("DarthMaul", 150, 18, 30, 'id="darth" ', 4, 'darthmaul.jpeg">', 'darthclass');
+    var charOne = new Character("ObiwanKenobi", 220, 15, 19, 'id="obi" ', 1, 'obiwan.jpg">', 'obiclass');
+    var charTwo = new Character("QuigonGinn", 225, 14, 20, 'id="qui" ', 2, 'quigon.jpeg">', 'quiclass');
+    var charThree = new Character("CountDooku", 250, 16, 21, 'id="count" ', 3, 'countdooku.jpg">', 'countclass');
+    var charFour = new Character("DarthMaul", 210, 18, 23, 'id="darth" ', 4, 'darthmaul.jpeg">', 'darthclass');
 
     //fill character array
     cArray.push(charOne);
@@ -98,17 +100,26 @@ $(document).ready(function() {
             checkpoint3 = true;
             
         }
+        if (checkpoint4)
+        {
+            attackerfixedattack = attacker.aP;
+            console.log(attackerfixedattack);
+        }
+        checkpoint4 = false;
     });
 
     $(document).on("keypress", function() {
         if (checkpoint3) {
             if (event.key === "s") {
-                setTimeout(attackaction, 3000);
+                setTimeout(attackaction, 100);
             }
         }
 
     });
     // --------------------------------------------------
+    
+    $("#replay").on("click", reload);
+
     document.onkeyup = function(event) {
         var userKey = event.key;
         if (userKey === "d") {

@@ -43,7 +43,9 @@ function resetSound() {
     $("#sabersbuzz")[0].currentTime = 0;
 }
 
-
+function reload(){
+    location.reload();
+}
 // makes player move with arrow keys
 $(document).keyup(function(e) {
     switch (e.which) {
@@ -94,7 +96,7 @@ document.onkeyup = function(event) {
 
 function attackaction(event) {
     currentdefender.hP = currentdefender.hP - attacker.aP;
-    attacker.aP = attacker.aP + 15;
+    
     attacker.hP = attacker.hP - currentdefender.cAP;
     $('.' + attacker.class).html(attacker.hP + " hP");
     $('.' + currentdefender.class).html(currentdefender.hP + " hP");
@@ -104,11 +106,12 @@ function attackaction(event) {
     $("#gamewindow").append(currentdefender.name + "attacked you for " + currentdefender.cAP + " damage!!" + "<br>");
     $("#gamewindow").append("Your hP is now: " + attacker.hP + "<br>");
     $("#gamewindow").append(currentdefender.name + "'s hP is now: " + currentdefender.hP);
-
+    attacker.aP = attacker.aP + attackerfixedattack;
     if (currentdefender.hP <= 0) {
         $("#defenderbox").append("You have defeated your opponent!!! Choose your next opponent");
         checkpoint3 = false;
         checkpoint2 = false;
+        checkpoint4 = false;
 
     }
     if (attacker.hP <= 0) {
